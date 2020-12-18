@@ -1,11 +1,12 @@
-import error from '../error.jpg';
+import error from "../error.jpg";
+import s from "../ImagesErrorView/imageErrorView.module.css";
 
-export default function ImagesErrorView() {
+export default function ImagesErrorView({ message }) {
   return (
     <div>
-      <img src={error} alt="error">
-        No such image finded...
-      </img>
+      <img className={s.error} src={error} />
+
+      <p>No such image finded...</p>
     </div>
   );
 }
